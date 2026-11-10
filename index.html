@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ana - Vai ou Racha</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        caption {
+            caption-side: top;
+            text-align: left;
+            padding: 0 0 12px;
+            color: #a12bb1;
+            font-weight: bold;
+        }
+        figcaption {
+            padding: 8px 4px 0;
+            font-size: 13px;
+            color: var(--cinza);
+            text-align: center;
+        }
+        .nota_interna {
+            font-size: 12px;
+            color: var(--cinza);
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+
+        <header class="header">
+            <div>
+                <a href="index.html" class="logo"><span class="texto_roxo">Vai</span> <span class="texto_cinza">ou</span> <span class="texto_roxo">Racha</span></a>
+            </div>
+            <nav class="menu">
+                <ul>
+                    <li><a href="#como_funciona">Como Funciona</a></li>
+                    <li><a href="#reputacao">Reputação</a></li>
+                    <li><a href="#galeria">Galeria</a></li>
+                    <li><a href="#proximos">Próximos rolês</a></li>
+                    <li><a href="#planos">Planos</a></li>
+                </ul>
+            </nav>
+            <a href="#cadastro" class="btn_entrar">Entrar</a>
+        </header>
+
+        <main>
+            <section class="banner">
+                <img class="banner_img" src="img/banner.png" alt="Banner do Vai ou Racha">
+                <div class="banner_texto">
+                    <h1>Sem Ghosting.<br><span class="texto_roxo">Vai ou Racha</span></h1>
+                    <p>Organize rolês de nicho com reputação pública, fila de espera inteligente e fechamento automático de vagas.</p>
+                    <div class="banner_botoes">
+                        <a href="#cadastro" class="btn_principal">Quero Entrar</a>
+                        <a href="#como_funciona" class="btn_contorno">Como Funciona</a>
+                    </div>
+                </div>
+            </section>
+            <div class="layout">
+
+                <div class="principal">
+                    <section id="como_funciona" class="secao">
+                        <div class="pill">Como Funciona</div>
+                        <h2>Três passos.<br><span class="texto_roxo">Zero desculpa.</span></h2>
+                        <p class="subtitulo">Do rolê criado ao check-in feito, tudo automático.</p>
+                        <!-- Grid A: 3 colunas iguais com repeat() e fr -->
+                        <div class="passos">
+                            <article class="passo">
+                                <div class="passo_icone">📅</div>
+                                <h3>Crie seu rolê</h3>
+                                <p>Define nicho, data, local e vagas.</p>
+                            </article>
+                            <article class="passo">
+                                <div class="passo_icone">✋</div>
+                                <h3>Participantes confirmam</h3>
+                                <p>Vaga fecha ao bater o limite.</p>
+                            </article>
+                            <article class="passo">
+                                <div class="passo_icone">✅</div>
+                                <h3>Check-in no dia</h3>
+                                <p>Quem chegou bate o check-in.</p>
+                            </article>
+                        </div>
+                    </section>
+
+                    <section id="reputacao" class="secao">
+                        <div class="pill">Reputação</div>
+                        <h2>Sua palavra, com nota.</h2>
+                        <p class="subtitulo">Atualizada a cada rolê, considerando só os últimos 10.</p>
+                        <div class="reputacao_grid">
+                            <article class="card_reputacao">
+                                <h3>Comparecimento</h3>
+                                <div class="stat_valor">94%</div>
+                                <span class="texto_cinza">últimos 10 rolês</span>
+                                <div class="barra">
+                                    <div class="barra_preenchida"></div>
+                                </div>
+                                <p class="acesso_titulo">Acesso garantido</p>
+                                <ul class="checklist">
+                                    <li>Todos os rolês</li>
+                                    <li>Rolês "só confiáveis"</li>
+                                    <li>Fila prioritária</li>
+                                </ul>
+                            </article>
+
+                            <article class="card_reputacao">
+                                <h3>Pontuação</h3>
+                                <div class="linha_pontuacao">
+                                    <span>Compareceu (check-in feito)</span>
+                                    <span class="positivo">+2</span>
+                                </div>
+                                <div class="linha_pontuacao">
+                                    <span>Cancelou com 4h+ de antecedência</span>
+                                    <span class="positivo">+1</span>
+                                </div>
+                                <div class="linha_pontuacao">
+                                    <span>Cancelou com menos de 4h</span>
+                                    <span style="color: var(--cinza);">0</span>
+                                </div>
+                                <div class="linha_pontuacao">
+                                    <span>Não cancelou e não fez check-in</span>
+                                    <span class="negativo">-1</span>
+                                </div>
+                                <div class="linha_pontuacao">
+                                    <span>Puxado da fila e não compareceu</span>
+                                    <span class="negativo">-2</span>
+                                </div>
+                            </article>
+
+                            <article class="card_reputacao">
+                                <h3>Novatos</h3>
+                                <p class="observacao">💡 Novos usuários entram como Em Observação até completar 3 rolês.</p>
+                            </article>
+                        </div>
+                    </section>
+
+                    <section id="nichos" class="secao">
+                        <div class="pill">Para quem é</div>
+                        <h2>Rolês de nicho.</h2>
+                        <p class="subtitulo">Escolha o seu e garanta a vaga.</p>
+                        <!-- Área com 4 cards de conteúdo -->
+                        <div class="cards">
+                            <article class="card_nicho">
+                                <div class="passo_icone">🏀</div>
+                                <h3>Basquete 3x3</h3>
+                                <p>Times montados na hora, sem faltar ninguém.</p>
+                            </article>
+                            <article class="card_nicho">
+                                <div class="passo_icone">🏃</div>
+                                <h3>Corrida</h3>
+                                <p>Treinos em grupo com horário e ponto de encontro.</p>
+                            </article>
+                            <article class="card_nicho">
+                                <div class="passo_icone">🎲</div>
+                                <h3>Board games</h3>
+                                <p>Mesa cheia, partida completa e fila de espera.</p>
+                            </article>
+                            <article class="card_nicho">
+                                <div class="passo_icone">🥾</div>
+                                <h3>Trilha</h3>
+                                <p>Grupo fechado com check-in antes da saída.</p>
+                            </article>
+                        </div>
+                    </section>
+
+                    <section id="galeria" class="secao">
+                        <div class="pill">Galeria</div>
+                        <h2>Rolês em ação.</h2>
+                        <p class="subtitulo">Alguns dos nichos que cabem no Vai ou Racha.</p>
+                        <!-- Galeria de imagens (grid de colunas iguais) -->
+                        <div class="galeria_grid">
+                            <figure class="figura">
+                                <img src="img/basquete.png" alt="Basquete 3x3">
+                                <figcaption>Basquete 3x3</figcaption>
+                            </figure>
+                            <figure class="figura">
+                                <img src="img/corrida.png" alt="Corrida">
+                                <figcaption>Corrida</figcaption>
+                            </figure>
+                            <figure class="figura">
+                                <img src="img/boardgame.png" alt="Board games">
+                                <figcaption>Board games</figcaption>
+                            </figure>
+                            <figure class="figura">
+                                <img src="img/trilha.png" alt="Trilha">
+                                <figcaption>Trilha</figcaption>
+                            </figure>
+                            <figure class="figura">
+                                <img src="img/cinema.png" alt="Cine debate">
+                                <figcaption>Cine debate</figcaption>
+                            </figure>
+                            <figure class="figura">
+                                <img src="img/futevolei.png" alt="Futevôlei">
+                                <figcaption>Futevôlei</figcaption>
+                            </figure>
+                        </div>
+                    </section>
+
+                    <section id="proximos" class="secao">
+                        <div class="pill">Agenda</div>
+                        <h2>Próximos rolês.</h2>
+                        <!-- Tabela 7x5: 7 linhas (1 de cabeçalho + 6 de dados) e 5 colunas -->
+                        <table class="tabela">
+                            <caption>Rolês abertos para inscrição</caption>
+                            <thead>
+                                <tr>
+                                    <th scope="col">Rolê</th>
+                                    <th scope="col">Nicho</th>
+                                    <th scope="col">Data</th>
+                                    <th scope="col">Vagas</th>
+                                    <th scope="col">Nível mínimo</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Sábado na quadra</td>
+                                    <td>Basquete 3x3</td>
+                                    <td>07/11</td>
+                                    <td>9 / 12</td>
+                                    <td>Só Confiáveis</td>
+                                </tr>
+                                <tr>
+                                    <td>Treino do parque</td>
+                                    <td>Corrida</td>
+                                    <td>08/11</td>
+                                    <td>14 / 20</td>
+                                    <td>Todos</td>
+                                </tr>
+                                <tr>
+                                    <td>Noite de tabuleiro</td>
+                                    <td>Board games</td>
+                                    <td>13/11</td>
+                                    <td>6 / 8</td>
+                                    <td>Todos</td>
+                                </tr>
+                                <tr>
+                                    <td>Trilha da serra</td>
+                                    <td>Trilha</td>
+                                    <td>15/11</td>
+                                    <td>10 / 15</td>
+                                    <td>Só Confiáveis</td>
+                                </tr>
+                                <tr>
+                                    <td>Sessão e debate</td>
+                                    <td>Cinema</td>
+                                    <td>20/11</td>
+                                    <td>18 / 25</td>
+                                    <td>Todos</td>
+                                </tr>
+                                <tr>
+                                    <td>Arena da praia</td>
+                                    <td>Futevôlei</td>
+                                    <td>22/11</td>
+                                    <td>7 / 12</td>
+                                    <td style="color: #a12bb1; font-weight: bold;">Em Observação</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <p class="nota_interna">Vagas preenchidas / vagas totais.</p>
+                    </section>
+
+                    <section id="planos" class="secao">
+                        <div class="pill">Planos</div>
+                        <h2>Comece Grátis.<br><span class="texto_roxo">Cresça sem limite.</span></h2>
+                        <p class="subtitulo">Escolha o plano que faz sentido para o seu rolê.</p>
+                        <div class="planos_cards">
+                            <article class="plano_card">
+                                <p class="plano_gratis">Grátis</p>
+                                <div class="plano_preco">R$0</div>
+                                <p class="plano_desc">Para quem tá começando a organizar rolês</p>
+                                <ul class="checklist">
+                                    <li>Até 15 vagas por rolê</li>
+                                    <li>Reputação com peso total na fila</li>
+                                    <li>Fechamento automático das vagas</li>
+                                    <li>Fila de espera inteligente</li>
+                                </ul>
+                                <a href="#cadastro" class="btn_plano btn_plano_s">Começar grátis</a>
+                            </article>
+                            <article class="plano_card">
+                                <h3 class="plano_premium">Premium</h3>
+                                <div class="plano_preco">Por evento<span>Pague só quando for usar</span></div>
+                                <p class="plano_desc">Para rolês grandes, sem limite de vagas</p>
+                                <ul class="checklist">
+                                    <li>Vagas ilimitadas por evento</li>
+                                    <li>Vaga de última hora com preenchimento automático</li>
+                                    <li>Painel consolidado de todos os eventos</li>
+                                    <li>Cancelamento com reembolso automático</li>
+                                </ul>
+                                <a href="#cadastro" class="btn_plano btn_plano_p">Assinar Premium</a>
+                            </article>
+                        </div>
+                    </section>
+
+                    <section id="cadastro" class="secao">
+                        <div class="pill">Cadastro</div>
+                        <h2>Entre no Vai ou Racha.</h2>
+                        <p class="subtitulo">Preencha seus dados e escolha seu primeiro nicho.</p>
+
+                        <form id="formulario" class="form" novalidate>
+                            <fieldset class="fieldset">
+                                <legend>Seus dados</legend>
+
+                                <label for="nome">Nome completo</label>
+                                <input type="text" id="nome" name="nome" placeholder="Seu nome">
+
+                                <label for="email">E-mail</label>
+                                <input type="email" id="email" name="email" placeholder="voce@email.com">
+
+                                <label for="telefone">Telefone</label>
+                                <input type="text" id="telefone" name="telefone" placeholder="(41) 99999-9999">
+
+                                <label for="idade">Idade</label>
+                                <input type="number" id="idade" name="idade" placeholder="18">
+
+                                <label for="cidade">Cidade</label>
+                                <input type="text" id="cidade" name="cidade" placeholder="Sua cidade">
+                            </fieldset>
+
+                            <fieldset class="fieldset">
+                                <legend>Seu rolê</legend>
+
+                                <label for="nicho">Nicho preferido</label>
+                                <select id="nicho" name="nicho">
+                                    <option value="">Selecione...</option>
+                                    <option value="basquete">Basquete 3x3</option>
+                                    <option value="corrida">Corrida</option>
+                                    <option value="boardgame">Board games</option>
+                                    <option value="trilha">Trilha</option>
+                                    <option value="cinema">Cine debate</option>
+                                    <option value="futevolei">Futevôlei</option>
+                                    <option value="outro">Outro</option>
+                                </select>
+
+                                <p class="form_rotulo">Você será:</p>
+                                <div class="radios">
+                                    <label><input type="radio" name="perfil" value="participante"> Participante</label>
+                                    <label><input type="radio" name="perfil" value="organizador"> Organizador</label>
+                                </div>
+
+                                <label for="mensagem">Mensagem</label>
+                                <textarea id="mensagem" name="mensagem" rows="4" placeholder="Conte o que você espera dos rolês"></textarea>
+
+                                <label class="check">
+                                    <input type="checkbox" id="aceite" name="aceite"> Aceito as regras de reputação do Vai ou Racha
+                                </label>
+                            </fieldset>
+
+                            <p id="msg_erro" class="msg_erro"></p>
+                            <p id="msg_sucesso" class="msg_sucesso"></p>
+
+                            <button type="submit" class="btn_enviar">Enviar cadastro</button>
+                        </form>
+                    </section>
+
+                </div>
+            </div>
+
+            <aside class="informacoes-aside">
+                <h3>Informações</h3>
+                <p>Veja os próximos rolês e acompanhe sua reputação.</p>
+            </aside>
+        </main>
+
+        <footer class="footer">
+            <div class="logo"><span class="texto_roxo">Vai</span> <span class="texto_cinza">ou</span> <span class="texto_roxo">Racha</span></div>
+            <span>Sem ghosting. © 2026</span>
+        </footer>
+
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
